@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/poke-finder/static/css/main.4313a9b5.chunk.css",
+    "main.js": "/poke-finder/static/js/main.a7f8a32e.chunk.js",
+    "main.js.map": "/poke-finder/static/js/main.a7f8a32e.chunk.js.map",
+    "runtime-main.js": "/poke-finder/static/js/runtime-main.1483e202.js",
+    "runtime-main.js.map": "/poke-finder/static/js/runtime-main.1483e202.js.map",
+    "static/js/2.90453ded.chunk.js": "/poke-finder/static/js/2.90453ded.chunk.js",
+    "static/js/2.90453ded.chunk.js.map": "/poke-finder/static/js/2.90453ded.chunk.js.map",
+    "index.html": "/poke-finder/index.html",
+    "precache-manifest.5435e48c8619b1dd38863cb4b6ee047f.js": "/poke-finder/precache-manifest.5435e48c8619b1dd38863cb4b6ee047f.js",
+    "service-worker.js": "/poke-finder/service-worker.js",
+    "static/css/main.4313a9b5.chunk.css.map": "/poke-finder/static/css/main.4313a9b5.chunk.css.map",
+    "static/js/2.90453ded.chunk.js.LICENSE.txt": "/poke-finder/static/js/2.90453ded.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1483e202.js",
+    "static/js/2.90453ded.chunk.js",
+    "static/css/main.4313a9b5.chunk.css",
+    "static/js/main.a7f8a32e.chunk.js"
+  ]
+}
