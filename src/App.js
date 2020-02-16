@@ -2,12 +2,14 @@ import React, {Component} from 'react'
 import {Container, Header, Segment} from 'semantic-ui-react'
 import {CardList} from './components/card-list/CardList'
 import {Search} from './components/search/Search'
+import Pagination from './components/Pagination'
 export default class App extends Component {
     constructor() {
         super();
         this.state = {
             pokemons: [],
-            searchField: ''
+            searchField: '',
+            pageOfItems: []
         }
     }
     componentDidMount() {
@@ -24,11 +26,16 @@ export default class App extends Component {
     handleChange = e =>{
         this.setState({searchField: e.target.value})
     }
+    onChangePage = (pageOfItems) => {
+        // update state with new page of items
+        this.setState({ pageOfItems: pageOfItems });
+    }
     render() {
-        const {pokemons, searchField} = this.state;
-        const filtered = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchField.toLowerCase()))
+        const {pokemons, searchField , pageOfItems} = this.state;
+        let filtered = pageOfItems.filter(pokemon => pokemon.name.toLowerCase().includes(searchField.toLowerCase()));
+        
         return (
-            <Container text>
+            <Container text className="text-center">
                 <Segment stacked>
                     <Header as='h1' className="text-center fnt poke-text">Pokémon</Header>
                     <Search
@@ -36,6 +43,7 @@ export default class App extends Component {
                         handleChange={this.handleChange} />
                 </Segment>
                 <CardList pokemon={filtered}/>
+                <Pagination items={pokemons} onChangePage={this.onChangePage} />
             </Container>
         )
     }
