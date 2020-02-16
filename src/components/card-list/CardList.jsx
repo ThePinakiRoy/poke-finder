@@ -19,7 +19,7 @@ export const CardList = (props) => {
                             .url
                             .substr(34, poke.url.length - 34);
                         return (
-                            <Grid.Column key={poke.name} className="my-column" mobile={16} tablet={8} computer={4}>
+                            <Grid.Column key={poke.name} className="my-column" mobile={8} tablet={8} computer={4}>
                                 <Card className="my-card">
                                     <Image
                                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
@@ -27,7 +27,7 @@ export const CardList = (props) => {
                                         ui={false}/>
                                     <Card.Content>
                                         
-                                        <Header as='h4' className="text-center">{poke.name.toUpperCase()}</Header>   
+                                        <Header as='h6' className="text-center">{poke.name.toUpperCase()}</Header>   
                                     </Card.Content>
                                     <Card.Content extra>
                                         <a>

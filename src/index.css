@@ -1,15 +1,23 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: 'Press Start 2P', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ddd;
+/* background: -moz-linear-gradient(top,  #ffffff 1%, #d4d4d4 100%);
+background: -webkit-linear-gradient(top,  #ffffff 1%,#d4d4d4 100%);
+background: linear-gradient(to bottom,  #ffffff 1%,#d4d4d4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d4d4',GradientType=0 );
+
+  
+background-attachment: fixed; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Press Start 2P', cursive;
 }
 .ui.grid>.row>.column {
   margin-top: 0 !important;
@@ -21,4 +29,19 @@ code {
 }
 .text-center{
   text-align: center;
+}
+h1 {
+  font-family: 'Press Start 2P', cursive;  
+}
+.ui.header {
+  
+  font-family: 'Press Start 2P', cursive !important;
+ 
+}
+.poke-text{
+
+	text-shadow: 0px 0px 5px #448aff;
+	color: #ffc107 !important;
+	font-size: 2.8rem !important;
+
 }

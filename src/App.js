@@ -11,7 +11,7 @@ export default class App extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://localhost:3000/model/pokemondata.json').then((response) => {
+        fetch('./model/pokemondata.json').then((response) => {
             return response.json();
         }).then((data) => {
             console.log(data.results);
@@ -30,9 +30,9 @@ export default class App extends Component {
         return (
             <Container text>
                 <Segment stacked>
-                    <Header as='h1' className="text-center">PokeMon</Header>
+                    <Header as='h1' className="text-center fnt poke-text">Pokémon</Header>
                     <Search
-                        placeholder={'Search Pokemon...'}
+                        placeholder={'Search Pokémon...'}
                         handleChange={this.handleChange} />
                 </Segment>
                 <CardList pokemon={filtered}/>
