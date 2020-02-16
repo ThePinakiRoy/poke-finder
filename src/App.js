@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {Container, Header, Segment} from 'semantic-ui-react'
 import {CardList} from './components/card-list/CardList'
+import {Search} from './components/search/Search'
 export default class App extends Component {
     constructor() {
         super();
         this.state = {
-            pokemon: []
+            pokemons: [],
+            searchField: ''
         }
     }
     componentDidMount() {
@@ -13,19 +15,27 @@ export default class App extends Component {
             return response.json();
         }).then((data) => {
             console.log(data.results);
-            this.setState({pokemon: data.results})
+            this.setState({pokemons: data.results})
         })
             .catch(function (error) {
                 console.log(error);
             });
     }
+    handleChange = e =>{
+        this.setState({searchField: e.target.value})
+    }
     render() {
+        const {pokemons, searchField} = this.state;
+        const filtered = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchField.toLowerCase()))
         return (
             <Container text>
-              <Segment stacked><Header as='h2' className="text-center">PokeMon</Header></Segment>
-                
-                <CardList pokemon={this.state.pokemon}/>
-
+                <Segment stacked>
+                    <Header as='h1' className="text-center">PokeMon</Header>
+                    <Search
+                        placeholder={'Search Pokemon...'}
+                        handleChange={this.handleChange} />
+                </Segment>
+                <CardList pokemon={filtered}/>
             </Container>
         )
     }

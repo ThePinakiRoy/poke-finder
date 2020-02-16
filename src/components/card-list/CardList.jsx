@@ -3,7 +3,7 @@ import {
     Grid,
     Card,
     Icon,
-    Image   
+    Image ,Header  
     
 } from 'semantic-ui-react'
 export const CardList = (props) => {
@@ -26,8 +26,8 @@ export const CardList = (props) => {
                                         wrapped
                                         ui={false}/>
                                     <Card.Content>
-                                        <Card.Header>{poke.name}</Card.Header>
-
+                                        
+                                        <Header as='h4' className="text-center">{poke.name.toUpperCase()}</Header>   
                                     </Card.Content>
                                     <Card.Content extra>
                                         <a>
